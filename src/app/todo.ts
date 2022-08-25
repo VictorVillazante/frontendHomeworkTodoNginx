@@ -1,5 +1,5 @@
 export class Todo{
-    constructor(public description:String,public completed:Boolean=false){
+    constructor(public description:String,public createdAt:String,public completed:Boolean=false){
 
     }
 }

@@ -7,7 +7,10 @@ export class todoList{
     getTodos(){
         return this.todos;
     }
-    addTodos(description:String){
-        this.todos.push(new Todo(description));
+    addTodos(todo:Todo){
+        this.todos.push(todo);
+    }
+    addNewTodo(todo:Todo){
+        this.todos.push(todo);
     }
 }

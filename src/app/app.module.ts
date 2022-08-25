@@ -9,6 +9,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button'; 
 import {MatIconModule} from '@angular/material/icon'; 
 import {MatTableModule} from '@angular/material/table'; 
+import {HttpClientModule} from '@angular/common/http'
+import { BackendService } from './services/backend.service';
 @NgModule({
   declarations: [
     AppComponent
@@ -20,9 +22,10 @@ import {MatTableModule} from '@angular/material/table';
     MatSliderModule,
     MatInputModule,MatButtonModule,
     MatIconModule,
-    MatTableModule
+    MatTableModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [BackendService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
