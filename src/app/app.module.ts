@@ -11,9 +11,15 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatTableModule} from '@angular/material/table'; 
 import {HttpClientModule} from '@angular/common/http'
 import { BackendService } from './services/backend.service';
+import {MatDialogModule} from '@angular/material/dialog'; 
+import {MatFormFieldModule} from '@angular/material/form-field'; 
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { DialogOverviewExampleDialog } from './dialog.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DialogOverviewExampleDialog
   ],
   imports: [
     BrowserModule,
@@ -23,7 +29,14 @@ import { BackendService } from './services/backend.service';
     MatInputModule,MatButtonModule,
     MatIconModule,
     MatTableModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    FormsModule,
+    ReactiveFormsModule
+  ],
+  exports: [
+    MatFormFieldModule,
   ],
   providers: [BackendService],
   bootstrap: [AppComponent]
