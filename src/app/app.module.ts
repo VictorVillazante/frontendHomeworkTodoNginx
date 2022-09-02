@@ -38,7 +38,13 @@ import { DialogOverviewExampleDialog } from './dialog.component';
   exports: [
     MatFormFieldModule,
   ],
-  providers: [BackendService],
+  providers: [
+    BackendService,
+    {
+      provide: DialogOverviewExampleDialog,
+      useValue: {}
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
